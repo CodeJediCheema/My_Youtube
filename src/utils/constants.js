@@ -6,3 +6,9 @@ export const YOUTUBE_CDN =
 
 export const USER_ICON =
   "https://static.vecteezy.com/system/resources/thumbnails/007/407/996/small_2x/user-icon-person-icon-client-symbol-login-head-sign-icon-design-vector.jpg";
+
+const YOUTUBE_KEY = "AIzaSyBzvwGWzKvuHl7wsCZ7PtTf6qPzziwDdkc";
+
+export const YOUTUBE_VIDEO_API =
+  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" +
+  YOUTUBE_KEY;

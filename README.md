@@ -3,3 +3,8 @@
 - Created skeleton of the app
 - Developed Header and used different CDN's
 - Implemented Tailwind classes to make Header's User Interface
+- Developed the SideBar Component
+- Added various categories in SideBar and implemented toggle feature
+- Build Video Container
+- Fetched the data from Youtube API and stored it into our Redux store
+- Fetched the data from redux store and displayed the videos on our main page
