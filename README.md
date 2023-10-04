@@ -6,5 +6,7 @@
 - Developed the SideBar Component
 - Added various categories in SideBar and implemented toggle feature
 - Build Video Container
-- Fetched the data from Youtube API and stored it into our Redux store
-- Fetched the data from redux store and displayed the videos on our main page
+- Fetched the data from Youtube API and used a state variable
+- Setup Routing using React router dom
+- Developed Watch video page
+- Used SearchParams to get the video id and play the dynamic video

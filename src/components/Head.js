@@ -2,6 +2,7 @@ import React from "react";
 import { MENU_CDN, USER_ICON, YOUTUBE_CDN } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const Head = () => {
   };
 
   return (
-    <div className="bg-white shadow-md p-2 flex items-center justify-between">
+    <div className="bg-white shadow-md p-2 flex items-center justify-between fixed w-full">
       <div className="flex items-center">
         <img
           onClick={() => toggleMenuHandler()}
@@ -19,7 +20,9 @@ const Head = () => {
           alt="youtube-menu"
           src={MENU_CDN}
         />
-        <img className="h-12" alt="youtube-logo" src={YOUTUBE_CDN} />
+        <a href="/">
+          <img className="h-12" alt="youtube-logo" src={YOUTUBE_CDN} />
+        </a>
       </div>
       <div className="flex items-center">
         <input

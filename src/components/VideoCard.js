@@ -11,38 +11,23 @@ const formatViewCount = (viewCount) => {
   }
 };
 
-const VideoCard = () => {
-  const videoData = useSelector((store) => store?.videos?.nowPlayingVideos);
-
-  if (!videoData || videoData.length === 0) {
+const VideoCard = ({ data }) => {
+  const toggleMenuHandler = useSelector((store) => store.app.isMenuOpen);
+  if (!data || data.length === 0) {
     return null;
   }
+  const { snippet, statistics } = data;
+  const { channelTitle, title, thumbnails } = snippet;
+  const viewCountFormatted = formatViewCount(statistics.viewCount);
 
   return (
-    <div className="flex flex-wrap gap-4">
-      {videoData.map((video) => {
-        const { snippet, statistics } = video;
-        const { channelTitle, title, thumbnails } = snippet;
-        const viewCountFormatted = formatViewCount(statistics.viewCount);
-
-        return (
-          <div
-            key={video.id}
-            className="w-52 bg-white rounded-lg shadow-md overflow-hidden"
-          >
-            <img
-              className="w-full h-40 object-cover"
-              alt="video"
-              src={thumbnails.high.url}
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-semibold">{title}</h2>
-              <p className="text-gray-500">{channelTitle}</p>
-              <p className="text-gray-500">{viewCountFormatted}</p>
-            </div>
-          </div>
-        );
-      })}
+    <div className={`p-2 m-2 shadow-lg ${toggleMenuHandler ? "w-64" : "w-72"}`}>
+      <img className="rounded-lg" alt="thumbnail" src={thumbnails.high.url} />
+      <ul>
+        <li className="font-bold py-2">{title}</li>
+        <li>{channelTitle}</li>
+        <li>{viewCountFormatted} views</li>
+      </ul>
     </div>
   );
 };
