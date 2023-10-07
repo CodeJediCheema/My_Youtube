@@ -8,7 +8,7 @@ const SideBar = () => {
   if (!toggleMenuHandler) return;
   return (
     <div className="shadow-xl w-44 px-4 ">
-      <ul className="py-4 pt-20">
+      <ul className="py-4">
         <li>
           <Link to={"/"}>Home</Link>{" "}
         </li>

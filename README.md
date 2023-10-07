@@ -10,3 +10,6 @@
 - Setup Routing using React router dom
 - Developed Watch video page
 - Used SearchParams to get the video id and play the dynamic video
+- Fetched Youtube suggestions API
+- Implemented Debouncing of 200ms
+- Debugging
