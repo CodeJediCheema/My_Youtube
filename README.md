@@ -13,3 +13,5 @@
 - Fetched Youtube suggestions API
 - Implemented Debouncing of 200ms
 - Debugging
+- Implemented Caching by making our search more efficient
+- Used Object type to store data rather than Arrays because of improved time complexity
